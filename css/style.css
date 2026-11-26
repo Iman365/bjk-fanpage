@@ -1,0 +1,448 @@
+/* Základní nastavení stránky */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* Horní navigační lišta */
+header {
+    background-color: #0d0d0d;
+    border-bottom: 3px solid #e30a17;
+    padding: 12px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo a název webu */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.brand-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Navigační odkazy */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #e30a17;
+    color: #ffffff;
+}
+
+/* Tlačítko pro změnu režimu */
+.theme-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Hlavní obsah */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+/* Oddělovací čára mezi sekcemi */
+hr {
+    border: none;
+    height: 3px;
+    width: 100%;
+    background-color: #e30a17;
+    margin: 20px 0;
+}
+
+/* Sekce hráčů a jejich fotografie */
+.sekce-hrac,
+.sekce-rival {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.text-blok {
+    flex: 1;
+}
+
+.hrac-foto {
+    width: 220px;
+    max-height: 260px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Některé images */
+.atiba {
+    width: 310px;
+}
+
+.abo {
+    width: 310px;
+    height: 600px;
+    margin-right: -125px;
+}
+
+/* Tabulka klubových trofejí */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #cccccc;
+}
+
+th {
+    background-color: #111111;
+    color: #ffffff;
+    border-bottom: 3px solid #e30a17;
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+    white-space: nowrap;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: rgba(227, 10, 23, 0.08);
+}
+
+/* Mapa stadionů */
+.mapa-stadionu {
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.mapa-stadionu h2,
+.mapa-stadionu h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.mapa-stadionu iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Kvíz */
+.quiz-kontejner {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.quiz-otazka {
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-left: 4px solid #e30a17;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.quiz-otazka h3 {
+    margin-top: 0;
+}
+
+.quiz-otazka label {
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quiz-otazka label:hover {
+    background-color: #e8e8e8;
+}
+
+.spravne {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.spatne {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Tlačítka pod kvízem */
+.quiz-tlacitka {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-hlavni,
+.btn-vedlejsi {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-hlavni {
+    background-color: #e30a17;
+    color: #ffffff;
+}
+
+.btn-hlavni:hover {
+    background-color: #b80712;
+}
+
+.btn-vedlejsi {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.btn-vedlejsi:hover {
+    background-color: #444444;
+}
+
+/* Výsledek kvízu */
+.quiz-vysledek {
+    display: none;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Patička webu */
+footer {
+    background-color: #0d0d0d;
+    color: #cccccc;
+    border-top: 3px solid #e30a17;
+    padding: 20px 25px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container p {
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #e30a17;
+}
+
+/* Tmavý režim */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .quiz-otazka,
+body.dark-mode .quiz-vysledek {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #444444;
+}
+
+body.dark-mode .quiz-otazka label:hover {
+    background-color: #333333;
+}
+
+body.dark-mode table td {
+    border-color: #444444;
+}
+
+body.dark-mode tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+.sekce-zebricek {
+  margin: 25px 0;
+  padding: 20px 25px;
+  border: 1px solid #cccccc;
+  border-left: 4px solid #e30a17;
+  border-radius: 8px;
+}
+
+.sekce-zebricek h3 {
+  margin-bottom: 12px;
+}
+
+.cislovany-seznam {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.cislovany-seznam li::marker {
+  color: #e30a17;
+  font-weight: bold;
+}
+
+body.dark-mode .sekce-zebricek {
+  background-color: #1e1e1e;
+  border-color: #444444;
+}
+
+/* Přizpůsobení menším obrazovkám (tablet) */
+@media (max-width: 800px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sekce-hrac,
+    .sekce-rival {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hrac-foto,
+    .atiba,
+    .abo {
+        width: 220px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .text-blok p {
+        text-align: justify;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+/* Přizpůsobení menším obrazovkám (mobil) */
+@media (max-width: 500px) {
+
+    header {
+        padding: 12px;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 7px;
+    }
+
+    .brand {
+        font-size: 1.1rem;
+    }
+
+    .quiz-tlacitka {
+        flex-direction: column;
+    }
+
+    .mapa-stadionu iframe {
+        height: 350px;
+    }
+}
